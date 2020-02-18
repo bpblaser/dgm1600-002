@@ -29,7 +29,7 @@ body {
 }
 
 a {
-    color: white;
+    color: black;
 
 }
 
@@ -54,4 +54,13 @@ figcaption {
 
 h1 {
     color: white;
+}
+
+#contact {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#contact a {
+    text-decoration: none;
 }

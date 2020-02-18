@@ -1,5 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe Bold', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
 #navbar {
     display: flex;
     justify-content: flex-end;
     position: fixed;
+    background-color: coral;
+    width: 100%;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin-right: 2rem;
+}
+.nav-list a {
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+a {
+    color: white;
+
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: steelblue;
+}
+
+#project-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+figcaption {
+    text-align: center;
+}
+
+h1 {
+    color: white;
 }

@@ -30,7 +30,6 @@ body {
 
 a {
     color: black;
-
 }
 
 #welcome-section {
@@ -63,4 +62,13 @@ h1 {
 
 #contact a {
     text-decoration: none;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    background-color: steelblue;
+    color: white;
 }

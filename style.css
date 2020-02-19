@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Segoe Bold', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2rem;
@@ -22,15 +26,28 @@ body {
     display: flex;
     margin-right: 2rem;
 }
+
+.nav-list a:hover {
+    color: steelblue;
+    background-color: peachpuff;
+    transition: 1s;
+    box-shadow: 12px 12px 2px 1px rgba(87, 87, 204, 0.425);
+  }
+
 .nav-list a {
     display: block;
     padding: 2rem;
     font-size: 2rem;
+    color: white;
 }
 
 a {
     color: black;
     text-decoration: none;
+}
+
+h3 {
+    color: white;
 }
 
 #welcome-section {
@@ -48,6 +65,12 @@ a {
     justify-content: space-around;
 }
 
+#project-list a:hover {
+    color: steelblue;
+    transition: .5s;
+    box-shadow: 12px 12px 2px 1px rgba(87, 87, 204, 0.425);
+  }
+
 figcaption {
     text-align: center;
 }
@@ -62,6 +85,13 @@ h1 {
     margin: 6rem;
     flex-wrap: wrap;
 }
+
+#contact a:hover {
+    color: steelblue;
+    transition: .5s;
+    border: solid black;
+    box-shadow: 12px 12px 2px 1px rgba(87, 87, 204, 0.425);
+  }
 
 footer {
     display: flex;

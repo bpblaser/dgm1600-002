@@ -1,0 +1,19 @@
+:root {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: coral;
+  }
+  
+  a > img {
+    height: 18rem;
+    margin: 4px;
+  }
+  
+  button {
+    font-size: 2rem;
+    background-color: silver;
+    border-radius: 12px;
+    padding: 8px;
+  }

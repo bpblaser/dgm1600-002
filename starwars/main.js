@@ -1,6 +1,4 @@
-import { films } from '../data/films.js'
 import { people } from '../data/people.js'
-import { starships } from '../data/starships.js'
 
 const gallery = document.querySelector('.greeting')
 const maleButton = document.querySelector('#maleButton')
@@ -8,10 +6,7 @@ const femaleButton = document.querySelector('#femaleButton')
 const otherButton = document.querySelector('#otherButton')
 
 const otherCharacters = people.filter(person => {
-	if (
-		person.gender === 'hermaphrodite' ||
-		person.gender === 'n/a' ||
-		person.gender === 'none'
+	if (person.gender === 'hermaphrodite' || person.gender === 'n/a' || person.gender === 'none'
 	) {
 return person
 }

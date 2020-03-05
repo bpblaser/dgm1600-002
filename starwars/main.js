@@ -2,7 +2,7 @@ import { films } from '../data/films.js'
 import { people } from '../data/people.js'
 import { starships } from '../data/starships.js'
 
-const greetingDiv = document.querySelector('.greeting')
+const gallery = document.querySelector('.greeting')
 const maleButton = document.querySelector('#maleButton')
 const femaleButton = document.querySelector('#femaleButton')
 const otherButton = document.querySelector('#otherButton')
@@ -25,11 +25,9 @@ femaleButton.addEventListener('click', event => {
   populateDOM(people.filter(person => person.gender === 'female'))
 })
 
-otherButton.addEventListener('click', (event) => {
+otherButton.addEventListener('click', event => {
   populateDOM(otherCharacters)
 })
-
-//"url": "https://swapi.co/api/people/1/"
 
 function getCharNumber(url) {
   let end = url.lastIndexOf('/')
@@ -40,14 +38,19 @@ function getCharNumber(url) {
   return url.slice(start, end)
 }
 
-//getCharNumber("https://swapi.co/api/people/1/")
+function removeChildren(element) {
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+}
 
 function populateDOM (characters) {
+  removeChildren(gallery)
   people.forEach(person => {
     //need to extract the number from the person.url property
     let charNum =  getCharNumber(person.url)
     let anchorWrap = document.createElement('a')
-anchorWrap.href = '#'
+    anchorWrap.href = '#'
 
 let imageItem = document.createElement('img')
 imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
@@ -64,6 +67,6 @@ imageItem.addEventListener('click', event => {
 	console.log(event)
 })
 anchorWrap.appendChild(imageItem)
-greetingDiv.appendChild(anchorWrap)-
+gallery.appendChild(anchorWrap)
 })
 }

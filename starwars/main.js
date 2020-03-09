@@ -1,6 +1,6 @@
 import { people } from '../data/people.js'
 
-const gallery = document.querySelector('.greeting')
+const gallery = document.querySelector('.gallery')
 const maleButton = document.querySelector('#maleButton')
 const femaleButton = document.querySelector('#femaleButton')
 const otherButton = document.querySelector('#otherButton')

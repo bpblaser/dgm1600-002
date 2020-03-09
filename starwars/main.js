@@ -6,7 +6,10 @@ const femaleButton = document.querySelector('#femaleButton')
 const otherButton = document.querySelector('#otherButton')
 
 const otherCharacters = people.filter(person => {
-	if (person.gender === 'hermaphrodite' || person.gender === 'n/a' || person.gender === 'none'
+  if (
+  person.gender === 'hermaphrodite' || 
+  person.gender === 'n/a' || 
+  person.gender === 'none'
 	) {
 return person
 }
@@ -41,7 +44,7 @@ function removeChildren(element) {
 
 function populateDOM (characters) {
   removeChildren(gallery)
-  people.forEach(person => {
+  characters.forEach(person => {
     //need to extract the number from the person.url property
     let charNum =  getCharNumber(person.url)
     let anchorWrap = document.createElement('a')

@@ -1,56 +1,55 @@
-import { people } from '../data/people.js'
+import { starships } from '../data/starships.js'
 import { getLastNumber, removeChildren } from '../scripts/utils.js'
 
-const gallery = document.querySelector('.gallery')
-const maleButton = document.querySelector('#maleButton')
-const femaleButton = document.querySelector('#femaleButton')
-const otherButton = document.querySelector('#otherButton')
+const nav = document.querySelector('.nav')
 
-const otherCharacters = people.filter(person => {
-  if (
-    person.gender === 'hermaphrodite' ||
-    person.gender === 'n/a' ||
-    person.gender === 'none'
-  ) {
-    return person
-  }
+const navList = document.querySelector('.navList')
+
+const shipView = document.querySelector('.main')
+
+const dialog = document.querySelector('.modal')
+const closeButton = document.querySelector('.modal-close')
+const modalBackground = document.querySelector('.modal-background')
+
+closeButton.addEventListener('click', () => {
+  dialog.classList.toggle("is-active")
 })
 
-maleButton.addEventListener('click', event => {
-  populateDOM(people.filter(person => person.gender === 'male'))
+modalBackground.addEventListener('click', () => {
+  dialog.classList.toggle("is-active")
 })
 
-femaleButton.addEventListener('click', event => {
-  populateDOM(people.filter(person => person.gender === 'female'))
-})
 
-otherButton.addEventListener('click', event => {
-  populateDOM(otherCharacters)
-})
+function populateNav(starships) {
+  starships.forEach(starship => {
 
-function populateDOM(characters) {
-  removeChildren(gallery)
-  characters.forEach(person => {
-    // need to extract the number from the person.url property
-    let charNum = getLastNumber(person.url)
     let anchorWrap = document.createElement('a')
     anchorWrap.href = '#'
-
-    let imageItem = document.createElement('img')
-    imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
-
-    imageItem.addEventListener('error', event => {
-      //console.log(`${event.type}: Loading image\n`)
-      //console.log(event)
-      imageItem.hidden = true
-      //imageItem.src = '../images/uvu-logo.jpeg'
+    anchorWrap.addEventListener('click', event => {
+      let shipName = event.target.textContent
+      const foundShip = starships.find(ship => ship.name === shipName)
+      populateShipView(foundShip)
     })
 
-    // add some way to handle user clicks on the image
-    imageItem.addEventListener('click', event => {
-      console.log(event)
-    })
-    anchorWrap.appendChild(imageItem)
-    gallery.appendChild(anchorWrap)
+    let listItem = document.createElement('li')
+    listItem.textContent = starship.name
+
+    anchorWrap.appendChild(listItem)
+    navList.appendChild(anchorWrap)
+    nav.appendChild(navList)
   })
 }
+
+function populateShipView(shipData) {
+  removeChildren(shipView)
+  let shipNum = getLastNumber(shipData.url)
+  let shipImage = document.createElement('img')
+  shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
+  shipImage.addEventListener('error', event => {
+    shipImage.hidden = true
+    dialog.classList.toggle("is-active")
+  })
+  shipView.appendChild(shipImage)
+}
+
+populateNav(starships)

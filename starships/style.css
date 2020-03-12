@@ -2,10 +2,15 @@
     box-sizing: border-box;
 }
 
+header, footer {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+
 a {
     text-decoration: none;
     font-size: 1.5rem;
-
 }
 
 li {
@@ -14,9 +19,9 @@ li {
 
 .container {
     display: flex;
-    padding-right: 1rem;
 }
 
 .nav {
     border: solid 2px steelblue;
+    padding-right: 1rem;
 }

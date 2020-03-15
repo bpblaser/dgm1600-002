@@ -13,7 +13,12 @@
   
   button {
     font-size: 2rem;
+    font-family: 'Orbitron';
     background-color: steelblue;
     border-radius: 12px;
     padding: 8px;
+  }
+
+  h1 {
+    font-family: 'Orbitron';
   }

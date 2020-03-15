@@ -15,6 +15,7 @@ a {
 
 li {
     list-style-type: none;
+    font-family: 'Orbitron';
 }
 
 .container {
@@ -24,4 +25,17 @@ li {
 .nav {
     border: solid 2px steelblue;
     padding-right: 1rem;
+}
+
+h1 {
+    color: white;
+    font-family: 'Orbitron';
+}
+
+body {
+    background-color: black;
+  }
+
+footer {
+    font-family: 'Orbitron';
 }

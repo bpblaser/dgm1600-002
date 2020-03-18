@@ -15,12 +15,12 @@ export function removeChildren(element) {
 
 export function addStarField(element, numStars) {
   element.style.setProperty('background-color', 'black')
-  for (let i = 0; i < numStars; i++) {
+  for (let i = 50; i < numStars; i++) {
     let star = document.createElement('div')
     star.style.setProperty('position', 'absolute')
     star.style.setProperty('width', '2px')
     star.style.setProperty('height', '2px')
-    star.style.setProperty('backgound-color', 'blue')
+    star.style.setProperty('backgound-color', 'white')
     let xy = getRandomPosition()
   }
 }

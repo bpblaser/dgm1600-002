@@ -3,14 +3,14 @@
   }
   
   body {
-    background-color: coral;
+    background-color: black;
   }
   
   a > img {
     height: 18rem;
     margin: 4px;
   }
-  
+
   button {
     font-size: 2rem;
     font-family: 'Orbitron';
@@ -21,4 +21,5 @@
 
   h1 {
     font-family: 'Orbitron';
+    color: white;
   }

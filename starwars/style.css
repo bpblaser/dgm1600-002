@@ -1,14 +1,52 @@
 :root {
     box-sizing: border-box;
   }
-  
+
+  #navbar {
+    background-color: black;
+    width: 100%;
+    font-family: "Orbitron";
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list a {
+    display: block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-list li.active a {
+  color: coral;
+}
+
   body {
     background-color: black;
   }
   
   a > img {
     height: 18rem;
-    margin: 4px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 12px;
+  }
+
+  .gallery {
+    text-align: center;
+    margin-top: 2%;
+  }
+
+  .gallery img:hover {
+    color: steelblue;
+    transition: .5s;
+    box-shadow: 10px 10px 2px 1px steelblue;
   }
 
   button {
@@ -17,9 +55,28 @@
     background-color: steelblue;
     border-radius: 12px;
     padding: 8px;
+    color: white;
+  }
+
+  #buttons {
+    margin-left: 5%;
+    width: 100%
+  }
+
+  #maleButton {
+    width: 30%;
+  }
+
+  #femaleButton {
+    width: 30%;
+  }
+
+  #otherButton {
+    width: 30%;
   }
 
   h1 {
     font-family: 'Orbitron';
     color: white;
+    text-align: center;
   }

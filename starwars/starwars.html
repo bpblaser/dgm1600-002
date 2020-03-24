@@ -8,12 +8,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <title>Star Wars Project Page</title>
 </head>
+<nav id="navbar">
+  <ul class="nav-list">
+      <li><a href="#homePage">Home</a></li>
+      <li class="active"><a href="#charactersPage">Characters</a></li>
+      <li><a href="#starshipsPage">Starships</a></li>
+  </ul>
+</nav>
 <body>
   <header>
     <h1>Characters in a galaxy far far away...</h1>
+    <div id="buttons">
     <button id="maleButton">Male</button>
     <button id="femaleButton">Female</button>
     <button id="otherButton">Other</button>
+  </div>
   </header>
   <div class="gallery"></div>
   <script src="main.js" type="module"></script>

@@ -8,6 +8,31 @@ header, footer {
     font-size: 2rem;
 }
 
+#navbar {
+    background-color: black;
+    width: 100%;
+    font-family: "Orbitron";
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list a {
+    display: block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-list li.active a {
+  color: coral;
+}
+
 a {
     text-decoration: none;
     font-size: 1.5rem;
@@ -22,14 +47,12 @@ li {
     display: flex;
 }
 
-.nav {
-    border: solid 2px steelblue;
-    padding-right: 1rem;
-}
+
 
 h1 {
     color: white;
     font-family: 'Orbitron';
+    font-weight: bold;
 }
 
 footer {

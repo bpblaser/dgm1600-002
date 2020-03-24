@@ -18,8 +18,10 @@ footer {
 }
 
 #navbar {
-    background-color: blue;
+    background-color: black;
     font-family: "Orbitron";
+    width: 100%;
+    height: 27px;
 }
 
 .nav-list {
@@ -44,6 +46,13 @@ footer {
 .nav-list li.active a {
   color: coral;
 }
+
+ul {
+    padding-inline-start: 0%;
+    margin-block-start: 0%;
+    margin-inline-start: 0%;
+    margin-block-end: 0%;
+  }
 
 a {
     text-decoration: none;

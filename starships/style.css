@@ -64,6 +64,10 @@ li {
     font-family: 'Orbitron';
 }
 
+a:hover {
+    color: white;
+}
+
 .container {
     display: flex;
 }

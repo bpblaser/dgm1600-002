@@ -3,7 +3,8 @@ body { font-family: sans-serif; }
 .scene {
   width: 200px;
   height: 260px;
-  border: 1px solid purple;
+  border: 2px solid black;
+  border-radius: 12px;
   margin: 40px 0;
   perspective: 600px;
 }
@@ -12,7 +13,7 @@ body { font-family: sans-serif; }
   width: 100%;
   height: 100%;
   transition: transform 1s;
-transform-style: preserve-3d;
+  transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
 }
@@ -26,7 +27,7 @@ transform-style: preserve-3d;
   width: 100%;
   height: 100%;
   line-height: 260px;
-  color: aqua;
+  color: white;
   text-align: center;
   font-weight: bold;
   font-size: 40px;
@@ -34,10 +35,12 @@ transform-style: preserve-3d;
 }
 
 .card__face--front {
-  background: red;
+  background: blue;
+  border-radius: 12px;
 }
 
 .card__face--back {
-  background: blue;
+  background: red;
   transform: rotateY(180deg);
+  border-radius: 12px;;
 }

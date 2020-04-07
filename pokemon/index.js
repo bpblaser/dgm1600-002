@@ -1,10 +1,12 @@
+const allPokemon = []
+
 function getPokeData(url) {
     fetch(url).then(function (response) {
         response.json().then(function (pokeData) {
             const pokeMap = pokeData.results.map(pokemon => {
               return fetch(pokemon.url).then(resData => {
                 resData.json().then(pokeJson => {
-                  return pokeJson.height
+                  allPokemon.push(pokeJson)
                 })
               })
             })
@@ -16,6 +18,8 @@ function getPokeData(url) {
 let pokemonGrid = document.querySelector('.pokemonGrid')
 
 getPokeData('https://pokeapi.co/api/v2/pokemon?&limit=25')
+
+populatePokeCards(allPokemon)
 
 function populatePokeCards(pokeArray) {
   pokeArray.forEach((pokemon) => {

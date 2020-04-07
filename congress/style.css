@@ -2,5 +2,17 @@
 .senators {
     display: flex;
     flex-wrap: wrap;
-    border-radius: 12%;
+    font-family: 'Cinzel', serif;
+}
+
+body {
+    background-image: url(/images/usa.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #b32134;
+}
+
+header h1 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
 }

@@ -89,7 +89,7 @@ h1 {
 #contact a:hover {
     color: steelblue;
     transition: .5s;
-    border: solid black;
+    border-left: solid 2px rgba(87, 87, 204, 0.425);
     box-shadow: 12px 12px 2px 1px rgba(87, 87, 204, 0.425);
   }
 

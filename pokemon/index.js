@@ -1,16 +1,53 @@
 function getPokeData(url) {
-    let pokemonGrid = document.querySelector('.pokemonGrid')
     fetch(url).then(function (response) {
-        response.json().then(function (data) {
-            console.log(data)
-            //pokemonGrid.textContent = data.name
+        response.json().then(function (pokeData) {
+            const pokeMap = pokeData.results.map(pokemon => {
+              return fetch(pokemon.url).then(resData => {
+                resData.json().then(pokeJson => {
+                  return pokeJson.height
+                })
+              })
+            })
+            populatePokeCards(pokeData.results)
           })
       })
 }
 
-getPokeData('https://pokeapi.co/api/v2/pokemon/1/')
+let pokemonGrid = document.querySelector('.pokemonGrid')
 
-var card = document.querySelector('.card');
+getPokeData('https://pokeapi.co/api/v2/pokemon?&limit=25')
+
+function populatePokeCards(pokeArray) {
+  pokeArray.forEach((pokemon) => {
+  let pokeScene = document.createElement('div')
+  pokeScene.className = 'scene'
+  let pokeCard = document.createElement('div')
+  pokeCard.className = 'card'
+  pokeCard.addEventListener('click', () => pokeCard.classList.toggle('is-flipped'),)
+  let pokeFront = document.createElement('div')
+  pokeFront.className = 'card__face card__face--front'
+  pokeFront.textContent = pokemon.name
+  let pokeBack = document.createElement('div')
+  pokeBack.className = 'card__face card__face--back'
+  pokeBack.textContent = 'back'
+
+  pokeCard.appendChild(pokeFront)
+  pokeCard.appendChild(pokeBack)
+  pokeScene.appendChild(pokeCard)
+  pokemonGrid.appendChild(pokeScene)
+})
+}
+
+/* var card = document.querySelector('.card')
 card.addEventListener( 'click', function() {
-  card.classList.toggle('is-flipped');
-});
+  card.classList.toggle('is-flipped')
+}); */
+
+
+/* <div class="scene">
+    <div class="card">
+      <div class="card__face card__face--front">front</div>
+      <div class="card__face card__face--back"><div><p>Hi, I'm here on the back</p></div></div>
+    </div>
+    </div>
+  */

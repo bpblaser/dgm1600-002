@@ -41,9 +41,7 @@ function populateDOM(characters) {
 
     imageItem.addEventListener('error', event => {
       //console.log(`${event.type}: Loading image\n`)
-      //console.log(event)
       imageItem.hidden = true
-      //imageItem.src = '../images/uvu-logo.jpeg'
     })
 
     // add some way to handle user clicks on the image

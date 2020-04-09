@@ -11,7 +11,6 @@
 }
 
 #navbar {
-  background-color: black;
   font-family: "Orbitron";
   width: 100%;
   height: 25px;
@@ -51,6 +50,7 @@ ul {
   body {
     background-color: black;
     margin: 0px;
+    background-image: url(/images/stars.jpg);
   }
   
   a > img {

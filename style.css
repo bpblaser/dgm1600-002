@@ -64,6 +64,8 @@ h3 {
 #project-list {
     display: flex;
     justify-content: space-around;
+    font-family: 'Segoe Bold', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
 }
 
 #project-list a:hover {
@@ -90,8 +92,9 @@ h1 {
 #contact a:hover {
     color: steelblue;
     transition: .5s;
-    border-left: solid 2px rgba(87, 87, 204, 0.425);
+    border-left: solid 4px rgba(87, 87, 204, 0.425);
     box-shadow: 12px 12px 2px 1px rgba(87, 87, 204, 0.425);
+    padding-left: 5px;
   }
 
 footer {

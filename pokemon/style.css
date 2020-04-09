@@ -49,3 +49,12 @@ body {
   transform: rotateY(180deg);
   border-radius: 12px;;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}

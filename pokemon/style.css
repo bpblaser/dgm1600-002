@@ -23,6 +23,7 @@ body {
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .card.is-flipped {

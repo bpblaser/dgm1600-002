@@ -26,7 +26,7 @@ function populatePokeCard(singlePokemon) {
     let pokeCard = document.createElement('div')
     pokeCard.className = 'card'
     pokeCard.addEventListener('click', () =>
-      pokeCard.classList.toggle('is-flipped'),
+    pokeCard.classList.toggle('is-flipped'),
     )
     let pokeFront = populateCardFront(singlePokemon)
     let pokeBack = populateCardBack(singlePokemon)

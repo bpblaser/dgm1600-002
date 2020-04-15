@@ -1,6 +1,7 @@
-body { 
-  font-family: sans-serif;
-  background-color: goldenrod;
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pokemonGrid {
@@ -12,8 +13,10 @@ body {
 .scene {
   width: 200px;
   height: 260px;
+  border: 1px solid #CCC;
   margin: 10px;
   perspective: 600px;
+  border-radius: 30px;
 }
 
 .card {
@@ -23,7 +26,6 @@ body {
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .card.is-flipped {
@@ -38,24 +40,18 @@ body {
   text-align: center;
   font-weight: bold;
   backface-visibility: hidden;
+  border-radius: 30px;
 }
 
 .card__face--front {
-  background: blue;
-  border-radius: 12px;
+  background: red;
 }
 
 .card__face--back {
-  background: red;
+  background: blue;
   transform: rotateY(180deg);
-  border-radius: 12px;;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: 400;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
+li {
+  text-align: left;
 }

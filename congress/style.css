@@ -1,5 +1,5 @@
   
-.senators {
+.senatorGrid {
     display: flex;
     flex-wrap: wrap;
     font-family: 'Cinzel', serif;
@@ -18,23 +18,32 @@ header h1 {
     font-family: 'Cinzel', serif;
 }
 
- img {
-    height: 15rem;
-    margin: 10px;
-    border: 2px solid white;
-    border-radius: 12px;
-  }
+figure {
+  margin: .5rem;
+}
 
-img:hover {
-    transition: .5s;
-    box-shadow: 10px 10px 2px 1px #54549e;
-  }
+figcaption {
+  display: flex;
+  justify-content: space-around;
+}
 
-  footer {
-    display: flex;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: 400;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-  }
+.fa-democrat {
+  color: blue;
+}
+
+.fa-republican {
+  color: red;
+}
+
+.fa-star {
+  color: yellow;
+}
+
+.progressDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: .75rem;
+}

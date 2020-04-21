@@ -36,7 +36,7 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  color: yellow;
+  color: white;
   text-align: center;
   font-weight: bold;
   backface-visibility: hidden;
@@ -54,4 +54,16 @@ header {
 
 li {
   text-align: left;
+}
+
+#startButton {
+  background-color: red;
+  color: white;
+  border-radius: 12px;
+}
+
+#newButton {
+  background-color: blue;
+  color: white;
+  border-radius: 12px;
 }

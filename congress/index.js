@@ -1,6 +1,12 @@
 import { senators } from '../data/senators.js'
+import { removeChildren } from '../scripts/utils.js'
 
 const senatorGrid = document.querySelector('.senatorGrid')
+const seniorityButton = document.querySelector('#seniorityButton')
+
+seniorityButton.addEventListener('click', () => {
+    senioritySort()
+})
 
 function getSimplifiedSenators(senatorArray) {
     return senatorArray.map(senator => {
@@ -18,7 +24,7 @@ function getSimplifiedSenators(senatorArray) {
 }
 
 function populateSenatorDiv(simpleSenators) {
-    console.log(simpleSenators)
+    removeChildren(senatorGrid)
     simpleSenators.forEach(senator => {
         let senDiv = document.createElement('div')
         let senFigure = document.createElement('figure')
@@ -57,20 +63,11 @@ function progressBars(senator) {
     seniorityBar.id = 'seniority'
     seniorityBar.max = 100
     seniorityBar.value = parseInt((senator.seniority / mostSeniority.seniority) * 100)
-    let votingLabel = document.createElement('label')
-    votingLabel.for = 'voting'
-    votingLabel.textContent = 'Vote'
-    let votingBar = document.createElement('progress')
-    votingLabel.id = 'voting'
-    votingBar.max = 100
-    votingBar.value = 10
 
     progressDiv.appendChild(loyaltyLabel)
     progressDiv.appendChild(loyaltyBar)
     progressDiv.appendChild(seniorityLabel)
     progressDiv.appendChild(seniorityBar)
-    progressDiv.appendChild(votingLabel)
-    progressDiv.appendChild(votingBar)
     return progressDiv
 }
 
@@ -96,7 +93,10 @@ const mostLoyal = getSimplifiedSenators(republicans).reduce((acc, senator) => {
     return acc.loyaltyPct > senator.loyaltyPct ? acc : senator
 })
 
-//console.log(loyalArray)
+function  senioritySort() {
+   populateSenatorDiv(getSimplifiedSenators(senators).sort((a, b) => {
+    return parseInt(a.seniority) - parseInt(b.seniority)
+    })
+   )}
 
 populateSenatorDiv(getSimplifiedSenators(senators))
-console.log(mostSeniority.seniority)

@@ -11,9 +11,9 @@ async function getAPIData(url) {
 
 // now, use the async getAPIData function
 function loadPage() {
-  getAPIData('https://pokeapi.co/api/v2/pokemon/?&limit=25').then((data) => {
+  getAPIData('https://pokeapi.co/api/v2/pokemon/?&limit=150').then((data) => {
     for (const pokemon of data.results) {
-      getAPIData(pokemon.url).then((pokeData) => {
+        getAPIData(pokemon.url).then((pokeData) => {
         populatePokeCard(pokeData)
       })
     }
@@ -67,8 +67,8 @@ function getImageFileName(pokemon) {
     return `00${pokemon.id}`
   } else if (pokemon.id > 9 && pokemon.id < 100) {
     return `0${pokemon.id}`
-  } else if (pokemon.id > 809) {
-    return `pokeball`
+  } else if (pokemon.id > 99 && pokemon.id < 809) {
+    return `${pokemon.id}`
   }
 }
 

@@ -1,3 +1,5 @@
+import { removeChildren } from '../scripts/utils.js'
+
 // Reusable async function to fetch data from the provided url
 async function getAPIData(url) {
   try {
@@ -24,9 +26,10 @@ let pokemonGrid = document.querySelector('.pokemonGrid')
 let startButton = document.querySelector('#startButton')
 let newButton = document.querySelector('#newButton')
 
-startButton.addEventListener('click', () => {
-  loadPage()
-})
+startButton.addEventListener("click", () => {
+  removeChildren(pokemonGrid);
+  loadPage();
+});
 
 newButton.addEventListener('click', () => {
   addPokemon()
@@ -69,6 +72,8 @@ function getImageFileName(pokemon) {
     return `0${pokemon.id}`
   } else if (pokemon.id > 99 && pokemon.id < 809) {
     return `${pokemon.id}`
+  } else if (pokemon.id > 809) {
+    return `thoremon`
   }
 }
 

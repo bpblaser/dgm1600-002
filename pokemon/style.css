@@ -60,10 +60,12 @@ li {
   background-color: red;
   color: white;
   border-radius: 12px;
+  display: flex;
 }
 
 #newButton {
   background-color: blue;
   color: white;
   border-radius: 12px;
+  display: flex;
 }

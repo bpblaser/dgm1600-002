@@ -1,6 +1,18 @@
- .seniorityButton {
-
+ #seniorityButton {
+  background-color: cadetblue;
+  color: white;
+  border-radius: 12px;
+  width: 30%;
+  height: 3rem;
+  margin-bottom: 1rem;
+  font-family: 'Cinzel', serif;
+  font-size: large;
  } 
+
+ header {
+  text-align: center;
+ }
+
 .senatorGrid {
     display: flex;
     flex-wrap: wrap;
@@ -54,6 +66,7 @@ figcaption {
 .progressDiv {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 label {
